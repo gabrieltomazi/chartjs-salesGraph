@@ -26,7 +26,7 @@ const BarChart = () => {
         const pegarInfosAPI = async () => {
 
             try {
-                const respostaFetch = await fetch('http://localhost:3000/vendas');
+                const respostaFetch = await fetch('https://chartjs-salesgraph.onrender.com/vendas');
                 const jsonRespostaFetch = await respostaFetch.json();
                 setArrVendasMensais(jsonRespostaFetch);
 

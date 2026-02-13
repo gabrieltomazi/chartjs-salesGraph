@@ -26,10 +26,11 @@ const connectDB = async () => {
 connectDB()
 
 
-app.get('/vendas', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         const VendasMensais = await VendaMensal.find()
         res.json(VendasMensais)
+
     } catch (error) {
         console.log('Erro ao procurar as vendas', error)
     }
